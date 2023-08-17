@@ -783,16 +783,6 @@ Google map
 .pointer-events-auto {
   pointer-events: auto;
 }
-@media (max-width: 767px) {
-  #map-content-wrapper {
-     margin-top: 0;
-  }
-}
-@media (max-width: 767px) {
-  #map-canvas {
-     height: 300px;
-  }
-}
 
 /* ==========================================================================
 RSVP form
@@ -860,6 +850,12 @@ RSVP form
         color: $form-placeholder;
       }
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .rsvp {
+      margin-top: 50px; /* Adjust this value as needed */
   }
 }
 
