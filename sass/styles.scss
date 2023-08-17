@@ -783,7 +783,11 @@ Google map
 .pointer-events-auto {
   pointer-events: auto;
 }
-
+@media (max-width: 767px) {
+  #map-content-wrapper {
+     margin-top: 0;
+  }
+}
 @media (max-width: 767px) {
   #map-canvas {
      height: 300px;
