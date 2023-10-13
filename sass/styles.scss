@@ -104,6 +104,12 @@ section .header {
   background-color: #000;
   border-radius: 4px;
 }
+.text-container {
+  max-width: 800px; /* You can adjust this value based on your preference */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* This ensures the text is not centered within its container */
+}
 /* ==========================================================================
 Animations
 ========================================================================== */
