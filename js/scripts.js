@@ -208,14 +208,14 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
-    /********************** RSVP **********************/
+    
     $('#rsvp-form').on('submit', function (e) {
     e.preventDefault();
     var data = {
         'email': $('input[name="email"]').val(),
         'name': $('input[name="name"]').val(),
-        'extras': $('input[name="extras"]').val(),
-        'inviteCode': $('input[name="invite_code"]').val()
+        'family': $('input[name="family"]').val(),
+        'commentaire': $('input[name="commentaire"]').val()
     };
 
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
@@ -225,7 +225,7 @@ $(document).ready(function () {
         $('#alert-wrapper').html(alert_markup('danger', '<strong>Désolé!</strong> Votre code est incorrecte.'));
     } else {
 */
-        $.post('https://script.google.com/macros/s/AKfycbxZUjwid7A16zfG-iB97Qhf3Br6evujh128DgKfq54UMnOo3jRTqvg_cH4HCScJi4Bj/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbyjuBjhEYQsHEVLCHqagARAMjWIbdW58HIaGe3nP4IiGg-5_BfMmh2s8S_HIsXbTNfF/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
