@@ -219,29 +219,22 @@ $(document).ready(function () {
     };
 
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-/*
-    if (MD5($('#invite_code').val()) !== '441363a479f31fba0b0a7bf7a2ba22dd'
-        && MD5($('#invite_code').val()) !== '202cb962ac59075b964b07152d234b70') {
-        $('#alert-wrapper').html(alert_markup('danger', '<strong>Désolé!</strong> Votre code est incorrecte.'));
-    } else {
-*/
-        $.post('https://script.google.com/macros/s/AKfycbyjuBjhEYQsHEVLCHqagARAMjWIbdW58HIaGe3nP4IiGg-5_BfMmh2s8S_HIsXbTNfF/exec', data)
-            .done(function (data) {
-                console.log(data);
-                if (data.result === "error") {
-                    $('#alert-wrapper').html(alert_markup('danger', data.message));
-                } else {
-                    $('#alert-wrapper').html('');
-                    $('#rsvp-modal').modal('show');
-                }
-            })
-            .fail(function (data) {
-                console.log(data);
-                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-            });
-});
 
-
+    $.post('https://script.google.com/macros/s/AKfycbyjuBjhEYQsHEVLCHqagARAMjWIbdW58HIaGe3nP4IiGg-5_BfMmh2s8S_HIsXbTNfF/exec', data)
+        .done(function (data) {
+            console.log(data);
+            if (data.result === "error") {
+                $('#alert-wrapper').html(alert_markup('danger', data.message));
+            } else {
+                $('#alert-wrapper').html('');
+                $('#rsvp-modal').modal('show');
+            }
+        })
+        .fail(function (data) {
+            console.log(data);
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+        });
+    });
 });
 
 /********************** Extras **********************/
