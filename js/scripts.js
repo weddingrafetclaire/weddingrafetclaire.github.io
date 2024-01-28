@@ -220,8 +220,8 @@ $(document).ready(function () {
 
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-    $.post('https://script.google.com/macros/s/AKfycbyjuBjhEYQsHEVLCHqagARAMjWIbdW58HIaGe3nP4IiGg-5_BfMmh2s8S_HIsXbTNfF/exec', data)
-        .done(function (data) {
+    $.post('https://script.google.com/macros/s/AKfycby5ylt1x5ksn7FN93mBH1WtVNpc7vr2cdzWlNQ-8SOi7an_h_OOkXJY0OFAhAAlJSvu/exec', data)
+            .done(function (data) {
             console.log(data);
             if (data.result === "error") {
                 $('#alert-wrapper').html(alert_markup('danger', data.message));
